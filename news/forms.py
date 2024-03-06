@@ -74,7 +74,7 @@ class BasicSignupForm(SignupForm):
             subject='Регистрация на портале',
             body='',
             from_email=settings.DEFAULT_FROM_EMAIL,
-            to= user.email
+            to= [user.email]
         )
 
         msg.attach_alternative(html_content_hello, 'text/html')
